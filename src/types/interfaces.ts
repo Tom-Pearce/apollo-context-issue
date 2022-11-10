@@ -1,11 +1,10 @@
-import { BaseContext } from '@apollo/server';
 
-export interface AuthContext extends BaseContext {
+export interface AuthContext {
     user?: {
         id: number;
         permissions: {
-            read: [string?];
-            write: [string?];
+            read: string[];
+            write: string[];
         };
     };
 }
